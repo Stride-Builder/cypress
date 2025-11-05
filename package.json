@@ -1,0 +1,40 @@
+{
+  "name": "stride-builder-cypress",
+  "version": "0.0.1",
+  "private": false,
+  "type": "module",
+  "description": "Cypress tests for the Stride Builder web app",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:dev": "cypress run --browser electron --headless",
+    "cy:run:api": "cypress run --browser electron --headless --record --project-id $CYPRESS_API_PROJECT_ID --key $CYPRESS_API_RECORD_KEY",
+    "cy:run:e2e": "cypress run --browser electron --headless --record --project-id $CYPRESS_PROJECT_ID --key $CYPRESS_RECORD_KEY",
+    "cy:open:doppler": "doppler run -- npm run cy:open",
+    "cy:dev:doppler": "doppler run -- npm run cy:dev",
+    "cy:run:api:doppler": "doppler run -- npm run cy:run:api",
+    "cy:run:e2e:doppler": "doppler run -- npm run cy:run:e2e",
+    "lint": "eslint . --ext .js",
+    "lint:fix": "eslint . --ext .js --fix",
+    "lint:nibble": "eslint-nibble . --ext .js"
+  },
+  "author": "Jacob Kohl",
+  "license": "TBD",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stride-builder/cypress.git"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  },
+  "dependencies": {
+    "cypress": "^15.6.0"
+  },
+  "devDependencies": {
+    "@stylistic/eslint-plugin": "^5.5.0",
+    "eslint": "^9.39.1",
+    "eslint-nibble": "^9.1.1",
+    "eslint-plugin-cypress": "^5.2.0",
+    "prettier": "^3.6.2"
+  }
+}
