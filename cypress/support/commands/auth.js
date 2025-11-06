@@ -1,5 +1,6 @@
 import { getAPI, postAPI } from './http'
 import { generateRandomString } from './generator'
+import { logoutAPI } from '../api/authAPI'
 
 Cypress.Commands.add('login', (email, restoreSession = true) => {
   const sessionName = restoreSession ? `session-${email}` : `session-${email}-${generateRandomString(5)}`
@@ -36,5 +37,12 @@ Cypress.Commands.add('login', (email, restoreSession = true) => {
           Cypress.currentUserId = body.data._id
         })
     },
+  })
+})
+
+Cypress.Commands.add('logout', () => {
+  logoutAPI().then((response) => {
+    expect(response.status).to.eq(200)
+    expect(response.body.success).to.be.true
   })
 })
