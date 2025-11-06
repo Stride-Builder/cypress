@@ -11,7 +11,3 @@ export function generateRandomString(length) {
   }
   return result
 }
-
-export function generateRandomEmail() {
-  return `${generateRandomString(10)}@example.com`
-}

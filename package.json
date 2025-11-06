@@ -13,8 +13,8 @@
     "cy:dev:doppler": "doppler run -- npm run cy:dev",
     "cy:run:api:doppler": "doppler run -- npm run cy:run:api",
     "cy:run:e2e:doppler": "doppler run -- npm run cy:run:e2e",
-    "lint": "eslint . --ext .js",
-    "lint:fix": "eslint . --ext .js --fix",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "lint:nibble": "eslint-nibble . --ext .js"
   },
   "author": "Jacob Kohl",
@@ -34,7 +34,6 @@
     "@stylistic/eslint-plugin": "^5.5.0",
     "eslint": "^9.39.1",
     "eslint-nibble": "^9.1.1",
-    "eslint-plugin-cypress": "^5.2.0",
-    "prettier": "^3.6.2"
+    "eslint-plugin-cypress": "^5.2.0"
   }
 }
