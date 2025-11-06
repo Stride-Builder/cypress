@@ -40,8 +40,7 @@ export function getLogoutAPI(failOnStatusCode = true) {
 
 /**
  * Logs out the current authenticated athlete
- * @param {Object} options - Additional options for the request
- * @param {boolean} options.failOnStatusCode - Whether to fail on status code other than 200
+ * @param {boolean} failOnStatusCode - Whether to fail on status code other than 200
  * @returns {Cypress.Chainable} The response from the POST request
  */
 export function logoutAPI(failOnStatusCode = true) {

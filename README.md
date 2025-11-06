@@ -49,3 +49,25 @@ npm run lint:fix
 # Want to tackle one lint rule at a time?
 npm run lint:nibble
 ```
+
+## Security Notice
+
+This repository contains **public test code** for public viewing purposes. The actual application and API source code remain private.
+
+**What's Public:**
+- Test structure and patterns
+- Cypress configuration
+- Test utilities and commands
+- API endpoint patterns (general structure only)
+
+**What's Protected:**
+- Actual API URLs and credentials (via environment variables)
+- Production data and real user information
+- Internal business logic implementation details
+- Database schemas and data models
+
+**For Contributors:**
+- Never commit `.env` files
+- Use `.env.example` as a template
+- All sensitive data should be environment variables
+- Test emails should use placeholder values in public code

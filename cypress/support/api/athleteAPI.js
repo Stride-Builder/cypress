@@ -1,7 +1,6 @@
 import { getAPI, postAPI, putAPI, deleteAPI } from '../commands/http'
 
 const baseUrl = `${Cypress.env('CYPRESS_API_BASE_URL')}/api/athlete`
-console.log(baseUrl)
 
 /**
  * Gets the current authenticated athlete
