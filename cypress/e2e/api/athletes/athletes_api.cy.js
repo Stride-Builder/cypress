@@ -1,4 +1,8 @@
-import { getAthleteAPI, createAthleteAPI, updateAthleteAPI } from '../../../support/api/athleteAPI'
+import {
+  getAthleteAPI,
+  createAthleteAPI,
+  updateAthleteAPI,
+} from '../../../support/api/athleteAPI'
 
 describe('Athletes API', () => {
   before(() => {
@@ -11,6 +15,13 @@ describe('Athletes API', () => {
   beforeEach(() => {
     cy.login('stridebuilder+qa@gmail.com')
   })
+
+  after(() => {
+    updateAthleteAPI({ name: 'QA User', privacy: false, coach: true }).then((response) => {
+      expect(response.status).to.equal(200)
+    })
+  })
+
   context('GET /api/athlete', () => {
     it('should return the current authenticated athlete', () => {
       getAthleteAPI().then((response) => {
