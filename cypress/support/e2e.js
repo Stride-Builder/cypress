@@ -1,4 +1,5 @@
 import './commands/index.js'
+import './workflow/index.js'
 
 // Configure Cypress behavior
 Cypress.on('uncaught:exception', () => false)

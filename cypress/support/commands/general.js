@@ -40,7 +40,8 @@ Cypress.Commands.add('clickDataTest', (selector) => {
  * @param {Object} options - The options to pass to the type command
  * @returns {Cypress.Chainable<JQuery<HTMLElement>>} The DOM element
  */
-Cypress.Commands.add('typeDataTest', (selector, text, options = { force: false }) => {
+Cypress.Commands.add('typeDataTest', (selector, text, options = { force: false, log: true }) => {
+  cy.clearDataTest(selector)
   cy.getDataTest(selector).type(text, options)
 })
 
