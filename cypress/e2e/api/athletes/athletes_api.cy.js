@@ -6,14 +6,14 @@ import {
 
 describe('Athletes API', () => {
   before(() => {
-    cy.login('stridebuilder+qa@gmail.com')
+    cy.login()
 
     // Reset the test user's profile to default values
     updateAthleteAPI({ name: 'QA User', privacy: false, coach: true })
   })
 
   beforeEach(() => {
-    cy.login('stridebuilder+qa@gmail.com')
+    cy.login()
   })
 
   after(() => {

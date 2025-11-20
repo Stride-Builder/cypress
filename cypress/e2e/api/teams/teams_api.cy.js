@@ -16,7 +16,7 @@ import {
 describe('Teams API', () => {
   const teamsCreated = []
   beforeEach(() => {
-    cy.login('stridebuilder+qa@gmail.com')
+    cy.login()
   })
 
   context('GET /api/teams', () => {
@@ -44,14 +44,14 @@ describe('Teams API', () => {
         expect(response.body.data.location).to.equal(teamBody.location)
         expect(response.body.data.private).to.equal(teamBody.private)
         expect(response.body.data.owner).to.deep.include({
-          "id": Cypress.currentUserId,
-          "name": Cypress.currentUserName,
+          id: Cypress.currentUserId,
+          name: Cypress.currentUserName,
         })
         expect(response.body.data.members).to.be.an('array')
         expect(response.body.data.members.length).to.equal(1)
         expect(response.body.data.members[0]).to.deep.include({
-          "id": Cypress.currentUserId,
-          "name": Cypress.currentUserName,
+          id: Cypress.currentUserId,
+          name: Cypress.currentUserName,
         })
         expect(response.body.data.coaches).to.be.an('array')
         expect(response.body.data.coaches.length).to.equal(0)

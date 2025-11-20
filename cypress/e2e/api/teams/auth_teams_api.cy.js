@@ -14,10 +14,6 @@ import {
 } from '../../../support/api/teamsAPI'
 
 describe('Auth Teams API', () => {
-  before(() => {
-    cy.logout()
-  })
-
   context('GET /api/teams', () => {
     it('should return a 401 status code', () => {
       getTeamsAPI(false).then((response) => {

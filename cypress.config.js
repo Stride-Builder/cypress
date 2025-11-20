@@ -23,5 +23,6 @@ export default defineConfig({
     apiUrl: process.env.CYPRESS_API_BASE_URL,
     CYPRESS_MASTER_USER: process.env.CYPRESS_MASTER_USER,
     CYPRESS_MASTER_PASSWORD: process.env.CYPRESS_MASTER_PASSWORD,
+    TEST_LOGIN_ENDPOINT: process.env.TEST_LOGIN_ENDPOINT,
   },
 })

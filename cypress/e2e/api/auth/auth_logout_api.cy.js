@@ -1,13 +1,13 @@
-import { 
+import {
   logoutAPI,
 } from '../../../support/api/authAPI'
 
 describe('Auth Logout API', () => {
   before(() => {
-    cy.login('stridebuilder+qa@gmail.com')
+    cy.login()
   })
 
-  context('POST /api/auth/logout', () => {
+  context('POST /api/logout', () => {
     it('should logout the current authenticated athlete', () => {
       cy.logout()
     })
