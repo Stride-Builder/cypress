@@ -24,5 +24,6 @@ export default defineConfig({
     CYPRESS_MASTER_USER: process.env.CYPRESS_MASTER_USER,
     CYPRESS_MASTER_PASSWORD: process.env.CYPRESS_MASTER_PASSWORD,
     TEST_LOGIN_ENDPOINT: process.env.TEST_LOGIN_ENDPOINT,
+    PUBLIC_URL: process.env.PUBLIC_URL,
   },
 })
